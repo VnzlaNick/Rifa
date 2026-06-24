@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#bec7d3",
+                    "on-secondary-container": "#566475",
+                    "outline": "#6f7882",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d8dadc",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-container": "#929ba3",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1da1f2",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#d6e4f9",
+                    "inverse-surface": "#2d3133",
+                    "on-surface-variant": "#3f4851",
+                    "surface-container": "#eceef0",
+                    "tertiary": "#575f67",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#dbe4ed",
+                    "on-primary-fixed": "#001d32",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "secondary-container": "#d3e1f6",
+                    "surface": "#f7f9fb",
+                    "on-secondary-fixed-variant": "#3a4859",
+                    "inverse-on-surface": "#eff1f3",
+                    "primary-fixed-dim": "#95ccff",
+                    "on-tertiary-fixed-variant": "#3f484f",
+                    "on-primary-fixed-variant": "#004a75",
+                    "inverse-primary": "#95ccff",
+                    "surface-tint": "#1da1f2",
+                    "on-surface": "#191c1e",
+                    "on-primary-container": "#003554",
+                    "primary-fixed": "#cde5ff",
+                    "on-secondary-fixed": "#0f1c2c",
+                    "on-tertiary-container": "#2a333a",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#bfc8d0",
+                    "on-tertiary-fixed": "#141d23",
+                    "secondary": "#525f71",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-low": "#f2f4f6",
+                    "primary": "#1da1f2",
+                    "secondary-fixed-dim": "#bac8dc",
+                    "error": "#ba1a1a",
+                    "brand-orange": "#ff5722"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "card-padding": "1rem",
+                    "container-margin": "1rem",
+                    "inline-gutter": "1rem",
+                    "section-padding": "1.5rem",
+                    "stack-gap": "0.75rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "title-sm": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "label-bold": ["11px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "22px", "letterSpacing": "0px", "fontWeight": "400"}],
+                    "display-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0px", "fontWeight": "400"}],
+                    "headline-md": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .news-shadow {
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+        }
+        .active-nav-glow {
+            filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.4));
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim shadow-sm border-b border-outline-variant dark:border-outline">
+<div class="flex items-center justify-between px-4 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-200 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-display-lg font-display-lg font-extrabold text-primary dark:text-primary-fixed-dim tracking-tighter">NOTICIAS PRO</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-200 text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+
+<main class="pt-0 px-container-margin space-y-section-padding">
+<!-- Header Title Section -->
+<section class="space-y-1 pt-20">
+<h2 class="font-headline-md text-headline-md text-primary border-l-4 border-primary pl-3">Noticias GamersPro </h2>
+<p class="text-on-surface-variant font-body-md">Lo último en el mundo del gaming profesional</p>
+</section>
+<!-- Featured News -->
+<section class="space-y-stack-gap">
+<div class="relative rounded-xl overflow-hidden news-shadow active:scale-[0.98] transition-transform duration-150 bg-surface-container-lowest border border-outline-variant">
+<div class="aspect-[16/9] w-full bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A cinematic shot of a professional esports arena with high-tech equipment and atmospheric blue stage lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWncn8Wr7fRKA2j6lLL7Tk2lgMAtKqEZ8Gxac-3-0LshJdKR8pOgDa_TKcxb3ninB4JwoCkRqmj4SnOJTzJGV0A00WtieozOye5zhmL7xokJd6t1pk02hQkfHBrw5rfJxz-D7EwRf5p9U3DBFsrBbyc-J3amBUVt8PS_LzS0WQoGdyPGU035iw3WYgp65HUxcOORah82ka5V495RD_8SW7C7pdNFsf26Bq6KOHgQHHqGVPVHx5JGi08EwOp-Q4URb2jUt7etDs3tI"/>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-brand-orange text-white font-label-bold text-label-bold px-2 py-1 rounded-sm uppercase">EVENTO</span>
+<span class="bg-primary text-white font-label-bold text-label-bold px-2 py-1 rounded-sm uppercase">URGENTE</span>
+</div>
+<div class="p-card-padding">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">calendar_today</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">24 JUN, 2026</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-gap leading-tight">La Gran Final del Circuito GamersPro: Todo lo que necesitas saber.</h3>
+<p class="text-body-md text-on-surface-variant mb-4 line-clamp-2">Analizamos a los finalistas, las estrategias clave y el equipamiento que definirá el futuro de la temporada profesional este año.</p>
+<button class="w-full bg-primary text-white font-title-sm text-title-sm py-3 rounded-lg shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+                        Leer más
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Featured News333 -->
+<section class="space-y-stack-gap">
+<div class="relative rounded-xl overflow-hidden news-shadow active:scale-[0.98] transition-transform duration-150 bg-surface-container-lowest border border-outline-variant">
+<div class="aspect-[16/9] w-full bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A cinematic shot of a professional esports arena with high-tech equipment and atmospheric blue stage lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWncn8Wr7fRKA2j6lLL7Tk2lgMAtKqEZ8Gxac-3-0LshJdKR8pOgDa_TKcxb3ninB4JwoCkRqmj4SnOJTzJGV0A00WtieozOye5zhmL7xokJd6t1pk02hQkfHBrw5rfJxz-D7EwRf5p9U3DBFsrBbyc-J3amBUVt8PS_LzS0WQoGdyPGU035iw3WYgp65HUxcOORah82ka5V495RD_8SW7C7pdNFsf26Bq6KOHgQHHqGVPVHx5JGi08EwOp-Q4URb2jUt7etDs3tI"/>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-brand-orange text-white font-label-bold text-label-bold px-2 py-1 rounded-sm uppercase">EVENTO</span>
+<span class="bg-primary text-white font-label-bold text-label-bold px-2 py-1 rounded-sm uppercase">URGENTE</span>
+</div>
+<div class="p-card-padding">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">calendar_today</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">24 JUN, 2026</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-gap leading-tight">La Gran Final del Circuito GamersPro: Todo lo que necesitas saber.</h3>
+<p class="text-body-md text-on-surface-variant mb-4 line-clamp-2">Analizamos a los finalistas, las estrategias clave y el equipamiento que definirá el futuro de la temporada profesional este año.</p>
+<button class="w-full bg-primary text-white font-title-sm text-title-sm py-3 rounded-lg shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+                        Leer más
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Horizontal Categories -->
+<section>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-container-margin px-container-margin py-2">
+<button class="whitespace-nowrap px-4 py-2 bg-primary text-white rounded-full font-title-sm active-nav-glow">Todo</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-title-sm hover:bg-surface-container-highest">Hardware</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-title-sm hover:bg-surface-container-highest">Torneos</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-title-sm hover:bg-surface-container-highest">Análisis</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-title-sm hover:bg-surface-container-highest">Entrevistas</button>
+</div>
+</section>
+<!-- Secondary News Grid -->
+<section class="grid grid-cols-1 gap-stack-gap">
+
+<!-- News Item 1 -->
+<div class="flex gap-4 bg-surface-container-lowest p-3 rounded-xl news-shadow border border-outline-variant active:scale-[0.98] transition-transform">
+<div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Close up of a high-end mechanical gaming keyboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPQKhw4TI0hpIvwxLJRMXJAML2wpQ5Gobi7-lyJ35rcBTHuRTlKUnQ3Msl3t-CdWwAyy-w88KN9akjOfRyMq0qHYXoE-LI9CLRFiktw53M3I_6-c7wa6nN9nqOkVK3a0jesjy3-LHy72vl95gyzJiEKh1hXNiIhNaEzlTzz8XEoDlMqPytp69ggL_-a3Dbb3bJUOcaQmhGBl2reyAzyZl8uHaDz33yAr4uR_bpNL5vJAv80uLIojtJsYXHuU-48zqOOwPAAfafpUE"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">Hardware</span>
+<span class="text-on-surface-variant text-label-sm">• 2h ago</span>
+</div>
+<h4 class="font-headline-md text-headline-md leading-tight line-clamp-2">Nuevos switches ópticos: ¿Realmente mejoran el tiempo de respuesta?</h4>
+</div>
+<button class="text-primary font-title-sm flex items-center gap-1 hover:underline">
+                        Leer más <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- News Item 2 -->
+<div class="flex gap-4 bg-surface-container-lowest p-3 rounded-xl news-shadow border border-outline-variant active:scale-[0.98] transition-transform">
+<div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOq1obb-LPwMsZgs4DYF0IYplahgw_XZHeFwxxvOurCKXw83aFx6W0ofyh7jHw5UzcvV0Ie44m12C__VXxIcjDg61qEkWZ_gQgMY7suURbc6_p9iPOCxC5QGMbyz6AHIjAY8APOEKdOpffRbVz_VIcT3IJR_MSg4S_Jpr9Hg0eP23NvddiIWdVfIKoSRNzGxKym0im0KtU2w0xCFcEjCQOkqjk6qt4PrQ9YkeC8Fk_wd1DSSEMgUMLEbCZqacECimVDwa2ANC2Afw"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">Esports</span>
+<span class="text-on-surface-variant text-label-sm">• 5h ago</span>
+</div>
+<h4 class="font-headline-md text-headline-md leading-tight line-clamp-2">Tendencias competitivas: El auge de la movilidad en el gaming móvil.</h4>
+</div>
+<button class="text-primary font-title-sm flex items-center gap-1 hover:underline">
+                        Leer más <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- News Item 3 -->
+<div class="flex gap-4 bg-surface-container-lowest p-3 rounded-xl news-shadow border border-outline-variant active:scale-[0.98] transition-transform">
+<div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A portrait of a gaming influencer in a high-tech studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxWPrzHgrvtY6fwMgW7JyUlfS-EByaMWec4CJMSCNyAaXXi_fotPAxUXzCoRP___PXL6brJqs2ou_LHYTe1DZZX9oSajZUc4Vt-mBB77OqLDluoUPhUXKmS2cC8z4TTsJAuHoEi8V4pn0T4Bllc3Ouw00M3uMjKa8JbrSfaG1vQK4WV-bknxPCw8wvRy3dGRjeZethHNZhd7RXq1jm4-7G3RxKyczVb7vhmZe-9ndlbi0yoZ-3IzirolMD6Eq0_HJYhfvllMzoNy0"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-brand-orange font-label-bold text-label-bold uppercase tracking-widest">EXCLUSIVO</span>
+<span class="text-on-surface-variant text-label-sm">• 8h ago</span>
+</div>
+<h4 class="font-headline-md text-headline-md leading-tight line-clamp-2">Entrevista: El capitán del equipo ProAlpha revela sus secretos.</h4>
+</div>
+<button class="text-primary font-title-sm flex items-center gap-1 hover:underline">
+                        Leer más <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Newsletter Subscription -->
+<section class="bg-secondary-container rounded-2xl p-6 border border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="relative z-10 space-y-4">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white">mail</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Boletín Pro</h3>
+<p class="text-body-md text-on-surface-variant">Recibe las noticias más importantes directamente en tu correo.</p>
+</div>
+<div class="flex flex-col gap-3">
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-body-md" placeholder="tu@email.com" type="email"/>
+<button class="bg-primary text-white font-title-sm py-3 rounded-lg shadow-md active:scale-95 transition-transform">Suscribirse</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md border-t border-outline-variant shadow-[0px_-2px_10px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center w-full px-2 py-3 pb-safe max-w-screen-xl mx-auto">
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-medium hover:text-primary transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-medium hover:text-primary transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-label-sm text-label-sm">Forums</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold active-nav-glow transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-sm text-label-sm">News</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-medium hover:text-primary transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-sm text-label-sm">Rankings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant font-medium hover:text-primary transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('shadow-md');
+        } else {
+            header.classList.remove('shadow-md');
+        }
+    });
+</script>
+</body></html>
